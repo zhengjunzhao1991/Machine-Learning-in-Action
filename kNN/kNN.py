@@ -159,10 +159,10 @@ class K_nn():
         将图片转换为向量
         :return:
         '''
-        returnVect = zeros((1, 1024))
+        returnVect = zeros((1, 1024))           # 创建零矩阵
         fr = open(filename)
         for i in range(32):
-            lineStr = fr.readline()
+            lineStr = fr.readline()             #
             for j in range(32):
                 returnVect[0, 32 * i + j] = int(lineStr[j])
         return returnVect
